@@ -94,7 +94,8 @@ print(""""
 ╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░╚═╝""")
 USER = str(input("[ + ] Username : "))
 PASSW = str(input("[ + ] Password : "))
-andr = "missing"
-mid = "missing"
+andr = "hrbhh"
+mid = "hrbhh"
 login(USER, PASSW)
 #  telegram @uhoeb
+
