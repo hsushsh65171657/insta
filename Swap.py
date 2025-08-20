@@ -10,38 +10,41 @@ import os
 
 def login(username, password):
     
-    uuid = str(uuid4())
+    uuid = '3b67cd48-7663-488d-8509-4caf099a935e' #str(uuid4())
     time_stamp = int(time.time())
-    phone_id = str(uuid4())
-        
-    login_headers = {
-        "Host": "i.instagram.com",
-        "X-Ig-App-Locale": "en-US",
-        "X-Ig-Device-Locale": "en-US",
-        "X-Ig-Mapped-Locale": "en-US",
-        "X-Ig-Bandwidth-Totalbytes-B": "0",
-        "X-Ig-Bandwidth-Totaltime-Ms": "0",
-        "X-Bloks-Version-Id": "8ca96ca267e30c02cf90888d91eeff09627f0e3fd2bd9df472278c9a6c022cbb",
-        "X-Ig-Www-Claim": "0",
-        "X-Bloks-Is-Layout-Rtl": "true",
-        "X-Ig-Device-Id": uuid,
-        "X-Ig-Family-Device-Id": phone_id,
-        "X-Ig-Android-Id": andr,
-        "X-Ig-Timezone-Offset": "14400",
-        "X-Fb-Connection-Type": "WIFI",
-        "X-Ig-Connection-Type": "WIFI",
-        "X-Ig-Capabilities": "3brTv10=",
-        "X-Ig-App-Id": "567067343352427",
-        "Priority": "u=3",
-        "User-Agent": "Instagram 275.0.0.27.98 Android (28/9; 240dpi; 900x1600; samsung; SM-N971N; star2qltechn; qcom; ar_EG; 458229258)",
-        "Accept-Language": "ar-EG, en-US",
-        "X-Mid": mid,
-        "Ig-Intended-User-Id": "0",
-        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-        "X-Fb-Http-Engine": "Liger",
-        "X-Fb-Client-Ip": "True",
-        "X-Fb-Server-Cluster": "True"
-    }
+    phone_id = '97b3895a-649d-40f8-a516-e63aae231f80' #str(uuid4())
+    andr = 'android-d71ab773d39dfdbd'
+    mid = 'aKOKJgABAAEoT7cbDb2xate4trut'
+    login_headers = headers = {
+    'User-Agent': 'Instagram 275.0.0.27.98 Android (29/10; 320dpi; 720x1369; Xiaomi; Redmi 8A; olivelite; qcom; en_US; 458229237)',
+    # 'Accept-Encoding': 'zstd, gzip, deflate',
+    'x-ig-app-locale': 'en_US',
+    'x-ig-device-locale': 'en_US',
+    'x-ig-mapped-locale': 'en_US',
+    'x-pigeon-session-id': 'UFS-910789d6-4632-4b44-a4f2-b28fec71ba69-0',
+    'x-pigeon-rawclienttime': '1755548834.052',
+    'x-ig-bandwidth-speed-kbps': '-1.000',
+    'x-ig-bandwidth-totalbytes-b': '0',
+    'x-ig-bandwidth-totaltime-ms': '0',
+    'x-bloks-version-id': '8ca96ca267e30c02cf90888d91eeff09627f0e3fd2bd9df472278c9a6c022cbb',
+    'x-ig-www-claim': '0',
+    'x-bloks-is-layout-rtl': 'false',
+    'x-ig-device-id': '3b67cd48-7663-488d-8509-4caf099a935e',
+    'x-ig-family-device-id': '97b3895a-649d-40f8-a516-e63aae231f80',
+    'x-ig-android-id': 'android-d71ab773d39dfdbd',
+    'x-ig-timezone-offset': '3600',
+    'x-fb-connection-type': 'MOBILE.LTE',
+    'x-ig-connection-type': 'MOBILE(LTE)',
+    'x-ig-capabilities': '3brTv10=',
+    'x-ig-app-id': '567067343352427',
+    'priority': 'u=3',
+    'accept-language': 'en-US',
+    'x-mid': 'aKOKJgABAAEoT7cbDb2xate4trut',
+    'ig-intended-user-id': '0',
+    'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+    'x-fb-http-engine': 'Liger',
+    'x-fb-client-ip': 'True',
+    'x-fb-server-cluster': 'True'}
     
     data = {
         "params": '{"client_input_params":{"should_show_nested_nta_from_aymh":0,"device_id":"' + andr + '","sim_phones":[],"login_attempt_count":1,"secure_family_device_id":"","machine_id":"' + mid + '","accounts_list":[],"auth_secure_device_id":"","has_whatsapp_installed":0,"password":"#PWD_INSTAGRAM:0:' + str(time_stamp) + ':' + str(password) + '","sso_token_map_json_string":"","family_device_id":"' + phone_id + '","fb_ig_device_id":[],"device_emails":[],"try_num":1,"lois_settings":{"lois_token":"","lara_override":""},"event_flow":"login_manual","event_step":"home_page","headers_infra_flow_id":"","openid_tokens":{},"client_known_key_hash":"","contact_point":"' + username + '","encrypted_msisdn":""},"server_params":{"should_trigger_override_login_2fa_action":0,"is_from_logged_out":0,"should_trigger_override_login_success_action":0,"login_credential_type":"none","server_login_source":"login","waterfall_id":"' + str(uuid4()) + '","login_source":"Login","is_platform_login":0,"INTERNAL__latency_qpl_marker_id":36707139,"offline_experiment_group":"caa_launch_ig4a_combined_60_percent","is_from_landing_page":0,"password_text_input_id":"o77b3n:135","is_from_empty_password":0,"ar_event_source":"login_home_page","qe_device_id":"' + uuid + '","username_text_input_id":"o77b3n:134","layered_homepage_experiment_group":null,"device_id":"' + andr + '","INTERNAL__latency_qpl_instance_id":1.46328651500313E14,"reg_flow_source":"login_home_native_integration_point","is_caa_perf_enabled":1,"credential_type":"password","is_from_password_entry_page":0,"caller":"gslr","family_device_id":"' + phone_id + '","INTERNAL_INFRA_THEME":"default,default","access_flow_version":"F2_FLOW","is_from_logged_in_switcher":0}}',
